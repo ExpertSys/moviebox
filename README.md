@@ -7,3 +7,16 @@ MovieBox is a tool to receive film, cast, images, ratings, and trailers using th
 
 ![picture alt](https://i.ibb.co/fkjgMHy/sample-homepage.png)
 
+# How It Works #
+
+Setup:
+Download the source code and start a new react project using npm run start.
+
+Technology:
+1. React
+2. React Router
+3. reg Javascript
+4. imDb API
+
+You can confiure the default movie list by modifying the search term in components/Home.js
+Line 12: this.performSearch("pokemon");
