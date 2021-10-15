@@ -1,0 +1,127 @@
+body{
+    background: #FFFFFF;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+#top-banner{
+    position: relative;
+    background-image: url('images/top-banner.png');
+    height: 336px;
+    top: -83px;
+    z-index: -2;
+    background-size: cover;
+}
+
+#page-title{
+    color: #FFFFFF;
+    text-align: center; 
+}
+
+#page-title h1{
+    text-transform: uppercase;
+    font-size: 43px;
+    font-weight: bold;
+    position: relative;
+    padding-top: 3em;
+}
+
+#page-title p{
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+#sub-navigation{
+    margin: 0 auto;
+}
+
+#sub-navigation ul{
+    background: #FFFFFF;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 3.5em;
+    height: 75px;
+    border-radius: 5px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+}
+
+#nav-progress{
+    border-bottom: 5px solid #D9D9D9;
+    width: 500px;
+    position: absolute;
+    bottom: 5px;
+    left: 59px;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+#sub-navigation ul li{
+    margin: 0 18px;
+    margin-top: 27px;
+    position: relative;
+    z-index: 4;
+}
+
+#sub-navigation ul li a{
+    text-transform: uppercase;
+    color: #6C6C6C;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+#prog-bar{
+    color: #C73232 !important;
+    border-bottom: 5px solid #E34A4A;
+    padding-bottom: 15px;
+    z-index: 2;
+    position: relative;
+    border-radius: 2px;
+    width: 51px;
+    top: 5px;
+    left: 0px;
+    /* animation: progressbar 1s infinite; */
+    transition: 0.2s ease-in-out;
+}
+
+#other-btn:hover #prog-bar{
+    left: 200px;
+    transition: 0.2s ease-in-out;
+}
+
+/* @keyframes progressbar{
+    0%{
+        left: 0;
+    }
+
+    100%{
+        left: 150px;
+    }
+} */
+
+#other-btn{
+    position: relative;
+}
+
+#other-btn::before{
+    background-image: url('images/arrow-down@3x.png');
+    height: 14px;
+    width: 25px;
+    position: absolute;
+    content: "";
+    right: -22px;
+    background-size: cover;
+    transform: scale(0.5);
+    top: 2px;
+
+}
+
+
