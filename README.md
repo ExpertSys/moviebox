@@ -5,8 +5,6 @@ MovieBox is a tool to receive film, cast, images, ratings, and trailers using th
 * Search movies by title, genre, cast
 * View upcoming movies by custom date
 
-![picture alt](https://i.ibb.co/fkjgMHy/sample-homepage.png)
-
 # How It Works #
 
 Setup:
@@ -18,5 +16,14 @@ Technology:
 3. reg Javascript
 4. imDb API
 
-You can confiure the default movie list by modifying the search term in components/Home.js
+You can confiure the default movie list by modifying the search term in components/Home.js .
+
 Line 12: this.performSearch("pokemon");
+
+Below you will find the custom website designed that I created for the app and mobile later using React Native.
+
+![picture alt](https://i.ibb.co/fkjgMHy/sample-homepage.png)
+
+![picture alt](https://i.ibb.co/nL3MjVy/sample-upcoming-movies.png)
+
+![picture alt](https://i.ibb.co/C9PvQGs/sample-mobile.png)
