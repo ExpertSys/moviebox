@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import '../Upcoming.css';
 
+// Start of our Upcoming page. Extend from component
 class Upcoming extends Component{
   constructor(props) {
     super(props);
   }
 
+  // Render out the contents of all upcoming movies 
   render() {
     return (
         <div>

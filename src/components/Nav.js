@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 
-function Shop() {
+// We are rendering our navigation module which will be displayed on most pages
+function Nav() {
   return (
     <section id="navigation">
     <ul>    
@@ -32,7 +33,7 @@ function Shop() {
   );
 }
 
-export default Shop;
+export default Nav;
 
 
     

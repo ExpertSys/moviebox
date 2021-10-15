@@ -1,13 +1,16 @@
 import React from 'react'
 
+// Extenidng our component so we can pass properties and use the lifecycle Component
 class MovieRow extends React.Component{
     viewMovie(){
         console.log(this.props.movie.title)
 
+        // Get the URL that the user requests from our souce imdb and then redirect
         const url = "https://www.themoviedb.org/movie/" + this.props.movie.id
         window.location.href = url
     }
 
+    // Render out our default view of what should be shown and once our request is finished, pull and replace the correct informaiton
     render() {
         return <div class="movie-block">
         <div class="movie-cover">  
@@ -25,4 +28,5 @@ class MovieRow extends React.Component{
     }
 }
 
+// Exporting our MovieRow Component
 export default MovieRow

@@ -4,16 +4,20 @@ import MovieRow from '../MovieRow.js';
 import LargeLogoHeader from '../components/LargeLogoHeader';
 import $ from 'jquery';
 
+// Extend Component for App
 class App extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
-    this.performSearch("pokemon");
+    super(props) // Reference to parent constructor
+    this.state = {} // Keep information about components current situation
+    this.performSearch("pokemon"); // Our default search upon website loading
   }
 
+  // Functionality to begin initial search query
   performSearch(searchTerm) {
     console.log("Perform search using moviedb"); 
-    const urlString = "https://api.themoviedb.org/3/search/movie?api_key=f76f86dfb0269613cba4cca37c0418ff&language=en-US&page=1&include_adult=false&query=" + searchTerm;
+    const urlString = "https://api.themoviedb.org/3/search/movie?api_key={keyomitted}}&language=en-US&page=1&include_adult=false&query=" + searchTerm;
+    
+    // The API we are using is the one provided by imdb
     $.ajax({
       url: urlString,
       success: (searchResults) => {
@@ -24,6 +28,7 @@ class App extends Component {
 
         var movieRows = []
 
+        // Loop through each row to later display customized results
         results.forEach((movie) => {
           movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path;
           const movieRow = <MovieRow movie={movie}/>
@@ -37,6 +42,7 @@ class App extends Component {
     })
   }
 
+  // This will help make each search more reactive
   searchChangeHandler(event) {
     console.log(event.target.value);
     const boundObject = this
@@ -44,8 +50,10 @@ class App extends Component {
     boundObject.performSearch(searchTerm);
   }
 
+  // Our View of information that is being rendered
   render() {
     return (
+        // We are using fragments to avoid adding extra nodes to DOM
       <React.Fragment>   
           <section id="jumbo-banner">
               <div id="newest-movies-banner">
@@ -183,6 +191,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;

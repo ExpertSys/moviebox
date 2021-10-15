@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// Our page for information about the website
 function About() {
   return (
     <div>
